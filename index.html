@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste: A Global Challenge</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #34495e;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: inline-flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://img.hellofresh.com/w_3840,q_auto,f_auto,c_limit,fl_lossy/hellofresh_website/no/cms/DK/HF170321_ExtraShot_47_DE_Colorful-veggie-recipes-from-the-oven-5_low.jpg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        section {
+            padding: 50px 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .content-grid div {
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-grid div h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .content-grid div img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #1abc9c;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .donate-button:hover {
+            background-color: #16a085;
+        }
+
+        .login-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .login-container input {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-container button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Food Waste: A Global Challenge</h1>
+        <p>A project to understand and reduce food waste in homes and communities</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#consequences">Consequences</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Stop Food Waste – The Time is Now</h2>
+        <p>Every year, millions of tons of food go to waste. Let's act together to protect the environment and help those in need.</p>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <h2>The Problem of Food Waste</h2>
+        <p>Food waste is a serious global problem that costs both money and negatively impacts our planet. In the EU alone, 88 million tons of food are wasted every year.</p>
+        <div class="content-grid">
+            <div>
+                <h3>Consumer Causes</h3>
+                <img src="https://i0.wp.com/www.unicef.dk/wp-content/uploads/2023/10/top_underernaering.jpg?fit=1920%2C850&quality=89&ssl=1" alt="Consumers">
+                <p>Meal planning errors, large portions, impulse purchases, and misunderstood date labeling are some of the biggest causes.</p>
+            </div>
+            <div>
+                <h3>Business Causes</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJVTdKo3pNsBquiaZHLnXNqPEvZMwxgZGmA&s" alt="Businesses">
+                <p>Poor storage and overproduction in supermarkets often lead to food waste that could have been consumed.</p>
+            </div>
+            <div>
+                <h3>Ethical Challenge</h3>
+                <img src="https://img.hellofresh.com/w_3840,q_auto,f_auto,c_limit,fl_lossy/hellofresh_website/no/cms/DK/HF170321_ExtraShot_47_DE_Colorful-veggie-recipes-from-the-oven-5_low.jpg" alt="Ethics">
+                <p>While millions of tons of food are thrown away, millions of people suffer from hunger. This is a major moral challenge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consequences Section -->
+    <section id="consequences">
+        <h2>Consequences of Food Waste</h2>
+        <p>Food waste causes environmental and economic problems that we can no longer ignore. Every kilogram of food that goes to waste releases CO2 and contributes to climate change.</p>
+        <img src="https://i0.wp.com/www.unicef.dk/wp-content/uploads/2023/10/top_underernaering.jpg?fit=1920%2C850&quality=89&ssl=1" alt="Consequences of Food Waste" style="border-radius: 8px; margin-top: 30px; width: 100%;">
+        <img src="https://epthinktank.eu/wp-content/uploads/2014/01/food-waste3.png" alt="Statistics" style="border-radius: 8px; margin-top: 30px; width: 100%;">
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <h2>Solutions to Food Waste</h2>
+        <p>There are several ways we can reduce food waste, both as individuals and as a community. Here are some of the most important actions:</p>
+        <div class="content-grid">
+            <div>
+                <h3>Donate Food</h3>
+                <p>Donate excess food to charity to help those in need while reducing waste.</p>
+                <a href="https://madspild.github.io/https-example-donation-page.com-/" class="donate-button" target="_blank">Donate Food</a>
+            </div>
+            <div>
+                <h3>Sustainable Production</h3>
+                <p>Companies and farmers should use modern storage techniques to reduce food waste from production to sale.</p>
+            </div>
+            <div>
+                <h3>Changed Consumer Habits</h3>
+                <p>Educating consumers about shopping planning and proper storage can significantly reduce food waste at home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics">
+        <h2>Food Waste Statistics</h2>
+        <p>Every year, 88 million tons of food are wasted in the EU alone. On a global scale, that number is even higher. Food waste costs millions and has a catastrophic impact on our environment.</p>
+        <img src="https://charm-eu.eu/wp-content/uploads/2023/09/DEI-Banners-1-scaled.jpg" alt="Food Waste Statistics" style="border-radius: 8px; margin-top: 30px; width: 100%;">
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="login-container">
+        <h2>Login to Your Account</h2>
+        <form>
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you want to learn more about how you can help reduce food waste, feel free to contact us.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Food Waste Project | All rights reserved.</p>
+    </footer>
+</body>
+</html>
